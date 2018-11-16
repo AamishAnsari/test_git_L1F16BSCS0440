@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Calculator</title>
+</head>
+
+<script type="text/javascript">
+	
+function displayN(num)
+{
+	calform.output.value=calform.output.value+num;
+
+}
+
+</script>
+
+
+<body>
+<form name=calform>
+  <input type="text" name="output" style="text-align:right">
+   <br>
+   <input type="button" name="bt7" value=7 onclick="displayN(bt7.value)">
+<input type="button" name="bt8" value=8 onclick="displayN(bt8.value)">
+   <input type="button" name="bt9" value=9 onclick="displayN(bt9.value)">
+    <input type="button" name="divbt" value=/ onclick="displayN(divbt.value)">
+    <br>
+    <input type="button" name="bt4" value=4 onclick="displayN(bt4.value)">
+   <input type="button" name="bt5" value=5 onclick="displayN(bt5.value)">
+   <input type="button" name="bt6" value=6 onclick="displayN(bt6.value)">
+    <input type="button" name="mulbt" value=* onclick="displayN(mulbt.value)">
+    <br>
+    <input type="button" name="bt1" value=1 onclick="displayN(bt1.value)">
+   <input type="button" name="bt2" value=2 onclick="displayN(bt2.value)">
+   <input type="button" name="bt3" value=3 onclick="displayN(bt3.value)">
+    <input type="button" name="addbt" value=+ onclick="displayN(addbt.value)">
+    <br>
+<input type="button" name="bt0" value=0 onclick="displayN(bt0.value)">
+   <input type="button" name="dotbt" value=. onclick="displayN(dotbt.value)">
+   <input type="button" name="eqbt" value== onclick="output.value=eval(output.value)">
+    <input type="button" name="subbt" value=- onclick="displayN(subbt.value)">
+    <br>
+</form>
+
+
+</body>
+</html>

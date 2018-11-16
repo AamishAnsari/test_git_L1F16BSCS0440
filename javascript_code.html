@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Quiz</title>
+</head>
+
+
+
+
+
+<body>
+<LABEL>Input for Table:&nbsp;</LABEL>
+<input type="number" id="input1"> 
+<br>
+<LABEL>Input for Table Range Start:&nbsp;</LABEL>
+<input type="number" id="input2">
+<br>
+<LABEL>Input for Table Range end:&nbsp;</LABEL>
+<input type="number" id="input3">
+<br>
+<button onclick="printTable()">Print Table</button>
+
+<p id="myParagraph"></p>
+
+
+<script type="text/javascript">
+	
+function printTable()
+{
+	var x = document.getElementById("input1").value;
+	var y = document.getElementById("input2").value;
+	var z = document.getElementById("input3").value;
+	var output=document.getElementById("myParagraph");
+	var res;
+	for(var i=y;i<=z;i++)
+	{
+		res=x*i;
+		output.innerHTML = output.innerHTML+res+"<br>";
+	}
+
+}
+</script>
+</body>
+
+</html>
