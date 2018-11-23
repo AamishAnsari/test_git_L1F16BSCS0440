@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		
+		RegForm
+	</title>
+
+</head>
+<script type="text/javascript">
+
+	function CheckName()
+	{
+		var reg= /^[a-zA-Z]{3,25}$/;
+		var fn= document.getElementById('fname').value;
+		if(reg.test(fn))
+		{
+			document.getElementById('resF').innerHTML= "Valid Name";
+		}
+		else
+		{
+			document.getElementById('resF').innerHTML= "Invalid Name";
+		}
+	}
+	function ChecklName()
+	{
+		var reg= /^[a-zA-Z]{3,25}$/;
+		var ln= document.getElementById('lname').value;
+		if(reg.test(ln))
+		{
+			document.getElementById('resL').innerHTML= "Valid Name";
+		}
+		else
+		{
+			document.getElementById('resL').innerHTML= "Invalid Name";
+		}
+	}
+	function CheckCell()
+	{
+		var creg= /^[\+]\d{2}[\-]\d{3}[\-]\d{7}$/;
+		var cel= document.getElementById('cell').value;
+		if(creg.test(cel))
+		{
+			document.getElementById('resC').innerHTML= "Valid Number";
+		}	
+		else
+		{
+			document.getElementById('resC').innerHTML= "Invalid Number";
+		}
+	}
+
+     function checkEmail(){
+//saeed.iqbal@gmail.com;
+   var reM = /^\w([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+     var m = document.getElementById('em').value;
+if(!reM.test(m))
+{
+    document.getElementById('resE').innerHTML="INVALID EMAIL";
+         }
+    else{
+      document.getElementById('resE').innerHTML="VALID EMAIL";
+        }
+}
+</script>
+
+<body>
+
+<table style="margin:60px">
+<tr><td><label>First Name:</label> 
+<input type="text" id="fname" placeholder="Aamish" onblur="CheckName()"></td>
+<td><p id="resF"></p></td></tr>
+<tr><td><label>Last Name:</label> 
+<input type="text" id="lname" placeholder="Ansari" onblur="ChecklName()"></td>
+<td><p id="resL"></p></td></tr>
+<tr><td><label>Cell#:</label>
+<input type="text" id="cell" placeholder="+92-311-8752999"onblur="CheckCell()"> </td>
+<td><p id="resC"></p></td></tr>
+<tr><td><label>Email:</label>
+<input type="text" id="em" placeholder="aamish@ucp.edu.pk"onblur="checkEmail()"></td>
+<td><p id="resE"></p></td></tr>
+
+</body>
+</html>
